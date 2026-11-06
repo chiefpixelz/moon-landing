@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+body {
+    font-family: 'Geist Variable';
+    background-color: #001833;
+    color: #e7fdff;
+}

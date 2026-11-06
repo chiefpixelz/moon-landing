@@ -1,16 +1,42 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import {Icon} from "astro-icon/components";
 ---
+<Layout>
+    <section class="relative h-screen w-full overflow-hidden isolate select-none">
+        <div class="w-full h-full absolute inset-0 -z-10 overflow-hidden">
+            <img src="/img/404-2.jpg" class="w-full h-full object-cover opacity-40" alt="404 Astronaut Image"/>
+        </div>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+        <div class="absolute pt-10 pb-10 pl-20 pr-20 inset-0 flex w-full flex-col justify-between">
+            <div class="flex mb-2 w-full min-h-10 items-center justify-end">
+                <div class="flex gap-4 font-medium text-sm">
+                    <p class="mix-blend-difference tracking-wide uppercase">Come back later, this site's not done yet.</p>
+                </div>
+            </div>
+            <div class="flex flex-col flex-1 gap-4 mt-25 mb-25 ml-25 mr-25 items-center justify-center text-center">
+                <h1 class="font-bold text-6xl mix-blend-difference tracking-wide uppercase">
+                    One small commit <br>
+                    for man...
+                </h1>
+                <br>
+                <p class="mix-blend-difference font-bold text-xs tracking-wide uppercase">Follow the mission :</p>
+                <div class="flex gap-3 z-20 mix-blend-difference text-2xl">
+                    <a href="https://www.linkedin.com/in/chiefpixelz/" target="_blank">
+                        <Icon name="mdi:linkedin"></Icon>
+                    </a>
+                    <a href="https://open.spotify.com/user/31dza6jaxedglj67ufnouxijhlca?si=e8aaf8f7930b46a3" target="_blank">
+                        <Icon name="simple-icons:spotify"></Icon>
+                    </a>
+                    <a href="https://github.com/chiefpixelz" target="_blank">
+                        <Icon name="simple-icons:github"></Icon>
+                    </a>
+                </div>
+            </div>
+            <div class="box-content mt-2 flex w-full min-h-10 items-center justify-between text-sm">
+                <p class="mix-blend-difference text-xs tracking-wide uppercase">© Chiefpixelz.</p>
+                <p class="mix-blend-difference text-xs tracking-wide uppercase">{new Date().getUTCMonth()}/{new Date().getDate()}/{new Date().getFullYear()}</p>
+            </div>
+        </div>
+    </section>
+</Layout>
